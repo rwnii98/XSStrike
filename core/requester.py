@@ -34,6 +34,7 @@ def requester(url, data, headers, GET, delay, timeout):
     logger.debug_json('Requester headers:', headers)
     try:
         if GET:
+       
             response = requests.get(url, params=data, headers=headers,
                                     timeout=timeout, verify=False, proxies=core.config.proxies)
         elif getVar('jsonData'):
